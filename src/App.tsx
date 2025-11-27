@@ -41,6 +41,7 @@ const VIBER_LINK = 'https://viber.click/37360136877'
 const INSTAGRAM_LINK = 'https://www.instagram.com/bonita.massage.md/'
 const FACEBOOK_LINK = 'https://www.facebook.com/p/Bonita-Massage-61552146661462/'
 const EMAIL_LINK = 'mailto:biznes13ww@mail.ru'
+const MAPS_DIRECTIONS_LINK = 'https://www.google.com/maps/dir/?api=1&destination=Alecu+Russo+20,+Chișinău'
 
 const services: Service[] = [
   {
@@ -244,7 +245,7 @@ const translations: Record<
       ctaSecondary: 'Написать в WhatsApp',
       callHint: 'Нажмите на “Позвонить”, чтобы услышать свободные окошки прямо сейчас.',
       addressTitle: 'Адрес',
-      addressLines: ['Chișinău, str. Ginta Latina 13', '3 этаж'],
+      addressLines: ['Chișinău, str. Alecu Russo 20'],
       contactTitle: 'Контакты',
       contactLines: ['Tel: +373 60 13 68 77', 'Mail: biznes13ww@mail.ru'],
       cardTitle: 'Игорь · Специалист по лечебному массажу',
@@ -324,7 +325,7 @@ const translations: Record<
       ctaSecondary: 'Scrie pe WhatsApp',
       callHint: 'Apasă “Sună” și afli imediat intervalele disponibile.',
       addressTitle: 'Adresă',
-      addressLines: ['Chișinău, str. Ginta Latina 13', 'Etajul 3'],
+      addressLines: ['Chișinău, str. Alecu Russo 20'],
       contactTitle: 'Contacte',
       contactLines: ['Tel: +373 60 13 68 77', 'Mail: biznes13ww@mail.ru'],
       cardTitle: 'Igor · Specialist în masaj terapeutic',
@@ -570,7 +571,15 @@ function App() {
                     {t.hero.addressTitle}
                   </p>
                   {t.hero.addressLines.map((line) => (
-                    <p key={line}>{line}</p>
+                    <a
+                      key={line}
+                      href={MAPS_DIRECTIONS_LINK}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-sky-700 underline-offset-2 hover:text-sky-900 hover:underline"
+                    >
+                      {line}
+                    </a>
                   ))}
                 </div>
                 <div>
@@ -881,7 +890,14 @@ function App() {
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-6 py-10 text-sm text-stone-600 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="font-semibold text-sky-900">Bonita Massage</p>
-            <p>Chișinău, str. Ginta Latina 13</p>
+            <a
+              href={MAPS_DIRECTIONS_LINK}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sky-700 underline-offset-2 hover:text-sky-900 hover:underline"
+            >
+              Chișinău, str. Alecu Russo 20
+            </a>
           </div>
           <div className="flex flex-wrap items-center gap-6">
             <a className="hover:text-sky-900" href="#about">
