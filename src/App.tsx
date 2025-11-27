@@ -7,7 +7,6 @@ import {
   Instagram,
   MessageCircle,
   MessageSquare,
-  Music2,
   PhoneCall,
   type LucideIcon,
 } from 'lucide-react'
@@ -41,7 +40,6 @@ const WHATSAPP_LINK = 'https://wa.me/37360136877'
 const VIBER_LINK = 'https://viber.click/37360136877'
 const INSTAGRAM_LINK = 'https://www.instagram.com/bonita.massage.md/'
 const FACEBOOK_LINK = 'https://www.facebook.com/p/Bonita-Massage-61552146661462/'
-const TIKTOK_LINK = 'https://www.tiktok.com/@igori.massajist.trener'
 const EMAIL_LINK = 'mailto:biznes13ww@mail.ru'
 
 const services: Service[] = [
@@ -53,7 +51,7 @@ const services: Service[] = [
       ru: 'Расслабляет мышцы после офисных нагрузок и снимает головное напряжение.',
       ro: 'Relaxează musculatura după ore la birou și reduce tensiunea cervicală.',
     },
-    price: { ru: '270 лей', ro: '270 lei' },
+    price: { ru: '350 лей', ro: '350 lei' },
   },
   {
     id: 'back45',
@@ -73,7 +71,7 @@ const services: Service[] = [
       ru: 'Восстанавливает тонус всего тела и гармонизирует кровообращение.',
       ro: 'Redă tonusul întregului corp și echilibrează circulația.',
     },
-    price: { ru: '450 лей', ro: '450 lei' },
+    price: { ru: '500 лей', ro: '500 lei' },
   },
   {
     id: 'full90',
@@ -83,7 +81,7 @@ const services: Service[] = [
       ru: 'Продлённая сессия с особым вниманием к зонам напряжения.',
       ro: 'Ședință prelungită cu atenție specială zonelor tensionate.',
     },
-    price: { ru: '590 лей', ro: '590 lei' },
+    price: { ru: '700 лей', ro: '700 lei' },
   },
   {
     id: 'legs30',
@@ -93,7 +91,7 @@ const services: Service[] = [
       ru: 'Лёгкость для ног, улучшение лимфотока и снятие отёчности.',
       ro: 'Oferă ușurință picioarelor, stimulează drenajul limfatic și reduce edemul.',
     },
-    price: { ru: '270 лей', ro: '270 lei' },
+    price: { ru: '350 лей', ro: '350 lei' },
   },
   {
     id: 'cavitation60',
@@ -139,28 +137,24 @@ const services: Service[] = [
 
 const founderHighlights: Translation[] = [
   {
-    ru: 'Более 5 лет опыта в спорте, реабилитации и массажных методиках.',
-    ro: 'Peste 5 ani de experiență în sport, reabilitare și tehnici de masaj.',
+    ru: 'Профессиональный подход и опыт. Каждое тело — уникально, и я работаю с ним индивидуально, опыт в разных странах.',
+    ro: 'Abordare profesională și experiență. Fiecare corp este unic, și lucrez individual cu el, experiență în diferite țări.',
   },
   {
-    ru: 'Персональные планы для снижения веса или набора мышечной массы без травм.',
-    ro: 'Planuri personalizate pentru slăbire sau creștere musculară fără traumatisme.',
+    ru: 'Реальные результаты после первого сеанса. Клиенты отмечают облегчение, улучшение подвижности и расслабление уже после первой процедуры. Я работаю не «по шаблону», а по состоянию мышц и задачам клиента.',
+    ro: 'Rezultate reale după prima ședință. Clienții observă ușurare, îmbunătățirea mobilității și relaxare deja după prima procedură. Lucrez nu «după șablon», ci în funcție de starea mușchilor și obiectivele clientului.',
   },
   {
-    ru: 'Ультразвуковая кавитация помогает уменьшить объёмы на 5–7 см за курс.',
-    ro: 'Cavitația ultrasonică ajută la diminuarea circumferinței cu 5–7 cm pe curs.',
+    ru: 'Безопасные и эффективные техники. Использую кинезитерапию, глубокие методы и мягкие терапевтические приёмы, чтобы добиться максимального эффекта без боли и риска для здоровья.',
+    ro: 'Tehnici sigure și eficiente. Folosesc kineziterapie, metode profunde și tehnici terapeutice blânde pentru a obține efect maxim fără durere și risc pentru sănătate.',
   },
   {
-    ru: 'Работа с клиентами любого возраста и особенностей, индивидуальный подход.',
-    ro: 'Lucru cu clienți de toate vârstele și nevoile, abordare individuală.',
+    ru: 'Комфортная атмосфера и уважение к клиенту. В студии создаю спокойную, чистую и уютную обстановку, где клиент может полностью расслабиться и чувствовать себя в безопасности.',
+    ro: 'Atmosferă confortabilă și respect față de client. În studio creez un mediu calm, curat și confortabil, unde clientul se poate relaxa complet și se poate simți în siguranță.',
   },
   {
-    ru: 'Бесплатная консультация и сопровождение в Viber, Telegram, WhatsApp.',
-    ro: 'Consultanță gratuită și suport pe Viber, Telegram, WhatsApp.',
-  },
-  {
-    ru: 'Предварительная запись обязательна по номеру +373 60 13 68 77.',
-    ro: 'Programare în avans obligatorie la +373 60 13 68 77.',
+    ru: 'Гибкий график и индивидуальный план. Подбираю расписание под каждого клиента и составляю персональный план восстановления с учётом образа жизни, нагрузок и целей.',
+    ro: 'Program flexibil și plan individual. Ajustez programul pentru fiecare client și elaborez un plan personal de recuperare ținând cont de stilul de viață, sarcinile și obiectivele.',
   },
 ]
 
@@ -292,7 +286,7 @@ const translations: Record<
         'Закрепим бронь и отправим подготовку в мессенджер',
       ],
       callButton: 'Позвонить сейчас',
-      callButtonHint: 'Работаем ежедневно 09:00 – 21:00 · Воскресенье по записи',
+      callButtonHint: 'Работаем ежедневно с 8:00 до 20:00 без выходных',
       emailButton: 'Написать на почту',
       channelsTitle: 'Соцсети и мессенджеры',
       channelsSubtitle: 'Выберите удобный канал — отвечу лично.',
@@ -372,7 +366,7 @@ const translations: Record<
         'Confirmăm rezervarea și trimit instrucțiunile pe chat',
       ],
       callButton: 'Sună acum',
-      callButtonHint: 'Program zilnic 09:00 – 21:00 · Duminică doar cu programare',
+      callButtonHint: 'Program zilnic de la 8:00 la 20:00 fără zile libere',
       emailButton: 'Trimite un email',
       channelsTitle: 'Rețele și mesagerie',
       channelsSubtitle: 'Alege canalul preferat — răspund personal.',
@@ -429,16 +423,6 @@ const contactChannels: ContactChannel[] = [
     },
     href: FACEBOOK_LINK,
     icon: Facebook,
-  },
-  {
-    id: 'tiktok',
-    label: { ru: 'TikTok', ro: 'TikTok' },
-    description: {
-      ru: 'Видео с техникой массажа и тренировок.',
-      ro: 'Clipuri cu tehnici de masaj și antrenament.',
-    },
-    href: TIKTOK_LINK,
-    icon: Music2,
   },
 ]
 
@@ -562,6 +546,18 @@ function App() {
                 >
                   <MessageCircle className="mr-2 h-5 w-5" />
                   {t.hero.ctaSecondary}
+                </motion.a>
+                <motion.a
+                  className="inline-flex items-center rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-pink-500/25 transition hover:from-purple-600 hover:to-pink-600"
+                  href={INSTAGRAM_LINK}
+                  target="_blank"
+                  rel="noreferrer"
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.97 }}
+                  transition={{ type: 'spring', stiffness: 260, damping: 24 }}
+                >
+                  <Instagram className="mr-2 h-5 w-5" />
+                  Instagram
                 </motion.a>
               </div>
               <p className="flex items-center gap-2 text-sm font-medium text-sky-700">
@@ -861,6 +857,22 @@ function App() {
                 </ul>
               </motion.div>
             </div>
+            <motion.div
+              {...fadeIn(0.35)}
+              viewport={fadeInViewport}
+              className="mt-8 overflow-hidden rounded-3xl shadow-xl ring-1 ring-white/60"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1800.8176686763054!2d28.883076175032308!3d47.03794590901899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97d4260c8acc1%3A0x8204f6ffa9b92a52!2sBONITA%20MASSAGE!5e1!3m2!1sru!2s!4v1764270850641!5m2!1sru!2s"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full"
+              />
+            </motion.div>
           </div>
         </motion.section>
       </main>
