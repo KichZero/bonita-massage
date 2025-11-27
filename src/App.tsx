@@ -53,7 +53,7 @@ const services: Service[] = [
       ru: 'Расслабляет мышцы после офисных нагрузок и снимает головное напряжение.',
       ro: 'Relaxează musculatura după ore la birou și reduce tensiunea cervicală.',
     },
-    price: { ru: '€14 (≈270 MDL)', ro: '€14 (≈270 MDL)' },
+    price: { ru: '270 лей', ro: '270 lei' },
   },
   {
     id: 'back45',
@@ -63,7 +63,7 @@ const services: Service[] = [
       ru: 'Усиленная проработка глубоких мышц для стойкого облегчения.',
       ro: 'Lucru mai intens pe musculatura profundă pentru relaxare de durată.',
     },
-    price: { ru: '€18 (≈350 MDL)', ro: '€18 (≈350 MDL)' },
+    price: { ru: '350 лей', ro: '350 lei' },
   },
   {
     id: 'full60',
@@ -73,7 +73,7 @@ const services: Service[] = [
       ru: 'Восстанавливает тонус всего тела и гармонизирует кровообращение.',
       ro: 'Redă tonusul întregului corp și echilibrează circulația.',
     },
-    price: { ru: '€23 (≈450 MDL)', ro: '€23 (≈450 MDL)' },
+    price: { ru: '450 лей', ro: '450 lei' },
   },
   {
     id: 'full90',
@@ -83,7 +83,7 @@ const services: Service[] = [
       ru: 'Продлённая сессия с особым вниманием к зонам напряжения.',
       ro: 'Ședință prelungită cu atenție specială zonelor tensionate.',
     },
-    price: { ru: '€30 (≈590 MDL)', ro: '€30 (≈590 MDL)' },
+    price: { ru: '590 лей', ro: '590 lei' },
   },
   {
     id: 'legs30',
@@ -93,7 +93,7 @@ const services: Service[] = [
       ru: 'Лёгкость для ног, улучшение лимфотока и снятие отёчности.',
       ro: 'Oferă ușurință picioarelor, stimulează drenajul limfatic și reduce edemul.',
     },
-    price: { ru: '€14 (≈270 MDL)', ro: '€14 (≈270 MDL)' },
+    price: { ru: '270 лей', ro: '270 lei' },
   },
   {
     id: 'cavitation60',
@@ -103,7 +103,7 @@ const services: Service[] = [
       ru: 'Комплекс для заметного уменьшения объёмов и выравнивания силуэта.',
       ro: 'Program complet pentru reducerea vizibilă a volumelor și conturare.',
     },
-    price: { ru: '€25 (≈500 MDL)', ro: '€25 (≈500 MDL)' },
+    price: { ru: '500 лей', ro: '500 lei' },
   },
   {
     id: 'cavitation45',
@@ -113,7 +113,7 @@ const services: Service[] = [
       ru: 'Поддерживающая процедура между основными сессиями.',
       ro: 'Ședință de întreținere între terapiile principale.',
     },
-    price: { ru: '€18 (≈350 MDL)', ro: '€18 (≈350 MDL)' },
+    price: { ru: '350 лей', ro: '350 lei' },
   },
   {
     id: 'cavitation15',
@@ -123,7 +123,7 @@ const services: Service[] = [
       ru: 'Локальная коррекция проблемных зон и запуск обменных процессов.',
       ro: 'Corectare locală a zonelor dificile și activarea metabolismului.',
     },
-    price: { ru: '€11 (≈210 MDL)', ro: '€11 (≈210 MDL)' },
+    price: { ru: '210 лей', ro: '210 lei' },
   },
   {
     id: 'vacuum',
@@ -133,7 +133,7 @@ const services: Service[] = [
       ru: 'Включены в программы для усиления лимфодренажного эффекта.',
       ro: 'Incluse în programe pentru a amplifica drenajul limfatic.',
     },
-    price: { ru: '€0 (бесплатно)', ro: '€0 (gratuit)' },
+    price: { ru: 'Бесплатно', ro: 'Gratuit' },
   },
 ]
 
@@ -203,8 +203,6 @@ const translations: Record<
     services: {
       kicker: string
       title: string
-      note: string
-      currencyNotice: string
     }
     methods: { title: string; subtitle: string; intro: string }
     contact: {
@@ -275,9 +273,6 @@ const translations: Record<
     services: {
       kicker: 'Прайс-лист',
       title: 'Сеансы для здоровья и эстетики',
-      note: 'Стоимость указана в евро для удобства гостей. Оплата возможна в MDL по курсу дня.',
-      currencyNotice:
-        '* Конвертация выполнена по курсу 1 € ≈ 20 MDL для визуальной ориентации.',
     },
     methods: {
       title: 'Методики, с которыми работаем',
@@ -358,9 +353,6 @@ const translations: Record<
     services: {
       kicker: 'Lista de prețuri',
       title: 'Ședințe pentru sănătate și estetică',
-      note: 'Prețurile sunt afișate în euro pentru transparență. Plata se face în MDL la cursul zilei.',
-      currencyNotice:
-        '* Conversia este calculată la cursul 1 € ≈ 20 MDL pentru afișare.',
     },
     methods: {
       title: 'Metodele pe care le aplicăm',
@@ -453,7 +445,7 @@ const contactChannels: ContactChannel[] = [
 const fadeIn = (delay = 0, distance = 24) => ({
   initial: { opacity: 0, y: distance },
   whileInView: { opacity: 1, y: 0 },
-  transition: { duration: 0.8, delay, ease: 'easeOut' as const },
+  transition: { duration: 0.5, delay, ease: 'easeOut' as const },
 })
 
 const fadeInViewport = { once: true, amount: 0.2 }
@@ -532,7 +524,7 @@ function App() {
 
           <div className="relative z-10 flex flex-col gap-8 lg:col-span-2 lg:flex-row lg:items-start lg:gap-16">
             <motion.div
-              {...fadeIn(0.1)}
+              {...fadeIn(0.05)}
               viewport={fadeInViewport}
               className="max-w-2xl space-y-6"
             >
@@ -596,7 +588,7 @@ function App() {
               </div>
             </motion.div>
             <motion.div
-              {...fadeIn(0.2)}
+              {...fadeIn(0.1)}
               viewport={fadeInViewport}
               className="relative mx-auto w-full max-w-sm rounded-3xl border border-white/60 bg-white/80 p-6 shadow-2xl backdrop-blur"
             >
@@ -623,7 +615,7 @@ function App() {
 
       <main className="flex-1">
         <motion.section
-          {...fadeIn(0.15)}
+          {...fadeIn(0.08)}
           viewport={fadeInViewport}
           className="mx-auto w-full max-w-6xl px-6 py-16 lg:py-20"
           id="about"
@@ -664,7 +656,7 @@ function App() {
         </motion.section>
 
         <motion.section
-          {...fadeIn(0.25)}
+          {...fadeIn(0.12)}
           viewport={fadeInViewport}
           className="bg-stone-950/95 py-16 text-stone-50 sm:py-20"
           id="services"
@@ -677,13 +669,12 @@ function App() {
               <h2 className="text-3xl font-semibold md:text-4xl">
                 {t.services.title}
               </h2>
-              <p className="max-w-2xl text-sm text-stone-300">{t.services.note}</p>
             </div>
             <div className="grid gap-8 md:grid-cols-2">
               {services.map((service, index) => (
                 <motion.article
                   key={service.id}
-                  {...fadeIn(0.3 + index * 0.05, 32)}
+                  {...fadeIn(0.15 + index * 0.03, 32)}
                   viewport={fadeInViewport}
                   whileHover={{ translateY: -6 }}
                   className="flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-white/10 p-8 shadow-lg shadow-black/10 backdrop-blur transition"
@@ -718,12 +709,11 @@ function App() {
                 </motion.article>
               ))}
             </div>
-            <p className="text-xs text-stone-400">{t.services.currencyNotice}</p>
           </div>
         </motion.section>
 
         <motion.section
-          {...fadeIn(0.35)}
+          {...fadeIn(0.18)}
           viewport={fadeInViewport}
           className="mx-auto w-full max-w-6xl px-6 py-16 lg:py-20"
           id="methods"
@@ -754,7 +744,7 @@ function App() {
         </motion.section>
 
         <motion.section
-          {...fadeIn(0.45)}
+          {...fadeIn(0.22)}
           viewport={fadeInViewport}
           className="bg-gradient-to-br from-[#F3E9DC] via-[#F7F4EE] to-[#E4F1FF] py-16"
           id="contact"
@@ -770,7 +760,7 @@ function App() {
             </div>
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
               <motion.div
-                {...fadeIn(0.5)}
+                {...fadeIn(0.25)}
                 viewport={fadeInViewport}
                 className="space-y-6 rounded-3xl bg-white/80 p-8 shadow-lg ring-1 ring-white/60"
               >
@@ -826,7 +816,7 @@ function App() {
                 </div>
               </motion.div>
               <motion.div
-                {...fadeIn(0.6)}
+                {...fadeIn(0.3)}
                 viewport={fadeInViewport}
                 className="space-y-6"
               >
@@ -842,7 +832,7 @@ function App() {
                   {contactChannels.map((channel, index) => (
                     <motion.li
                       key={channel.id}
-                      {...fadeIn(0.65 + index * 0.05, 28)}
+                      {...fadeIn(0.32 + index * 0.03, 28)}
                       viewport={fadeInViewport}
                     >
                       <motion.a
